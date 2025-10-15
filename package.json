@@ -1,0 +1,16 @@
+{
+  "name": "omie-produto-cliente",
+  "version": "1.0.0",
+  "description": "Dashboard OMIE - Histórico de Vendas",
+  "scripts": {
+    "build": "cd frontend && npm install && npm run build"
+  },
+  "dependencies": {
+    "@vercel/node": "^3.0.0",
+    "axios": "^1.7.7"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.2.2"
+  }
+}

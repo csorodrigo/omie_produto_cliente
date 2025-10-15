@@ -1,0 +1,37 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "frontend/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist"
+      }
+    },
+    {
+      "src": "api/search/*.ts",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/search/clientes",
+      "dest": "/api/search/clientes.ts"
+    },
+    {
+      "src": "/api/search/produtos",
+      "dest": "/api/search/produtos.ts"
+    },
+    {
+      "src": "/api/search/historico",
+      "dest": "/api/search/historico.ts"
+    },
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/frontend/$1"
+    }
+  ]
+}
